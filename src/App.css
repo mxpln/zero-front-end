@@ -5,3 +5,13 @@
   left: 0;
   right: 0;
 }
+
+.marker {
+  background-image: url('/marker.svg');
+  background-size: cover;
+
+  width: 24px;
+  height: 24px;
+  /* border-radius: 50%; */
+  cursor: pointer;
+}
