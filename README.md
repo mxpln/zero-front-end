@@ -15,7 +15,7 @@ In the project directory, you can run:
 
 ## Dependencies 
 
-	 "@material-ui/core": "^4.11.0",
+    "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
