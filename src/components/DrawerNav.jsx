@@ -64,9 +64,11 @@ const useStyles = makeStyles((theme) => ({
 	},
 	title: {
 		flexGrow: 1,
+		display: 'flex',
 	},
 	drawerPaper: {
 		position: 'relative',
+
 		backgroundColor: '#f5ebe9',
 		whiteSpace: 'nowrap',
 		width: drawerWidth,
@@ -77,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	drawerPaperClose: {
 		overflowX: 'hidden',
+
 		transition: theme.transitions.create('width', {
 			easing: theme.transitions.easing.sharp,
 			duration: theme.transitions.duration.leavingScreen,
@@ -104,6 +107,9 @@ const useStyles = makeStyles((theme) => ({
 	},
 	fixedHeight: {
 		height: 240,
+	},
+	icon: {
+		marginLeft: '5px',
 	},
 }));
 
@@ -144,7 +150,7 @@ export default function Dashboard() {
 						noWrap
 						className={classes.title}
 					>
-						Dashboard
+						<img src="./zero-logo.svg" id="zero-logo" alt="zero-logo" />
 					</Typography>
 					<IconButton color="inherit">
 						<Badge badgeContent={4} color="secondary">
@@ -168,7 +174,7 @@ export default function Dashboard() {
 				<Divider />
 
 				<List>
-					<div>
+					<div className={classes.icon}>
 						<ListItem button>
 							<ListItemIcon>
 								<DirectionsRunIcon />
