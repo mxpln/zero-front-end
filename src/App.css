@@ -9,7 +9,6 @@
 .marker {
   background-image: url('/marker.svg');
   background-size: cover;
-
   width: 34px;
   height: 34px;
   /* border-radius: 50%; */
@@ -17,8 +16,7 @@
 }
 
 .mapboxgl-popup {
-  max-width: 350px;
-
+  max-width: 300px;
 }
 
 .mapboxgl-popup-content {

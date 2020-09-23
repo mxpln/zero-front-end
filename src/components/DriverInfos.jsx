@@ -5,7 +5,7 @@ const DriverInfos = ({ info }) => {
 
 	return (
 		<div id="driver-info">
-			{/* <img width={240} src={info.image} /> */}
+			<img width={240} src={driverProperties.picture} />
 			<h4>{driverProperties.name}</h4>
 			<p>id: #{driverProperties.id}</p>
 			<ul>
