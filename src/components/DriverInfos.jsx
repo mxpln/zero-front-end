@@ -1,20 +1,19 @@
 import React from 'react';
 
 const DriverInfos = ({ info }) => {
-	console.log(info);
+	const driverProperties = info.properties;
 
 	return (
-		<>
-			<div>
-				<a
-					target="_new"
-					href={`http://en.wikipedia.org/w/index.php?title=Special:Search&search=${info}`}
-				>
-					Wikipedia
-				</a>
-			</div>
-			<img width={240} src={info.image} />
-		</>
+		<div id="driver-info">
+			{/* <img width={240} src={info.image} /> */}
+			<h4>{driverProperties.name}</h4>
+			<p>id: #{driverProperties.id}</p>
+			<ul>
+				Deliveries:<li>Done: {driverProperties.done} </li>
+				<li>Left: {driverProperties.left} </li>
+			</ul>
+			<p>Next destination:{driverProperties.destination} </p>
+		</div>
 	);
 };
 

@@ -10,7 +10,7 @@ const SIZE = 27;
 
 // Important for perf: the markers never change, avoid rerender when the map viewport changes
 const Pin = ({ data, onClick }) => {
-	return data.features.map((driver, index) => (
+	return data.map((driver, index) => (
 		<Marker
 			key={`marker-${index}`}
 			longitude={driver.geometry.coordinates[0]}

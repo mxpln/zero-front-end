@@ -8,19 +8,67 @@
 				"coordinates": [-74.00878, 40.70563]
 			},
 			"properties": {
-				"title": "Mapbox",
-				"description": "Washington"
+				"name": "Jamal",
+				"id": 127,
+				"done": 4,
+				"left": 3,
+				"destination": "277 Church St # A, New York, NY 10013"
 			}
 		},
 		{
 			"type": "Feature",
 			"geometry": {
 				"type": "Point",
-				"coordinates": [-122.414, 37.776]
+				"coordinates": [-73.956721, 40.733749]
 			},
 			"properties": {
-				"title": "Mapbox",
-				"description": "San Francisco, Californi"
+				"name": "Natasha",
+				"id": 145,
+				"done": 1,
+				"left": 5,
+				"destination": "727 Manhattan Ave, Brooklyn, NY 11222"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-73.990316, 40.691051]
+			},
+			"properties": {
+				"name": "Devin",
+				"id": 97,
+				"done": 5,
+				"left": 3,
+				"destination": "268 Clinton St, Brooklyn, NY 11201"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-73.947446, 40.809668]
+			},
+			"properties": {
+				"name": "Mao",
+				"id": 107,
+				"done": 8,
+				"left": 0,
+				"destination": "Done for today"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-74.036025, 40.716056]
+			},
+			"properties": {
+				"name": "Joe",
+				"id": 101,
+				"done": 1,
+				"left": 2,
+				"destination": "263 1st St, Hoboken, NJ 07030"
 			}
 		}
 	]

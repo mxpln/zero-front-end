@@ -55,8 +55,8 @@ const Map = () => {
 				<Popup
 					tipSize={5}
 					anchor="top"
-					longitude={-74.00878}
-					latitude={40.70563}
+					longitude={popupInfo.geometry.coordinates[0]}
+					latitude={popupInfo.geometry.coordinates[1]}
 					closeOnClick={false}
 					onClose={() => setPopupInfo()}
 				>
@@ -67,8 +67,7 @@ const Map = () => {
 	};
 
 	const onClickMarker = (driver) => {
-		setPopupInfo({ driver });
-		console.log(driver);
+		setPopupInfo(driver);
 	};
 
 	return (
@@ -80,7 +79,7 @@ const Map = () => {
 			onViewportChange={(nextViewport) => setViewport(nextViewport)}
 			mapboxApiAccessToken={MAPBOX_TOKEN}
 		>
-			<Pin data={geojson} onClick={onClickMarker} />
+			<Pin data={geojson.features} onClick={onClickMarker} />
 			{renderPopup()}
 
 			<div style={fullscreenControlStyle}>
