@@ -2,30 +2,26 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Zero 🌱 
 
-## Install
+## How to run the project
 
+#### 1. Clone the project
     $ git clone https://github.com/Pauline-dcs/zero-front-end.git
+
+#### 2. Run npm install to add all the dependencies used
     $ npm install
-    
-## Available Scripts
 
-In the project directory, you can run:
+#### 3. In the project directory, run the project with the command npm start
 
-### `npm start`
+#### `npm start`
 
-## Dependencies 
 
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "mapbox-gl": "^1.12.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-map-gl": "^5.2.8",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+
+## Map  
+
+ #### The map used is from Mapbox: https://www.mapbox.com/
+ #### The token to access the map is hardcoded so you should not need other one. In case here is the token I used in my app:  
+  
+    $ 'pk.eyJ1IjoicGF1bGluZS1kY3MiLCJhIjoiY2s5b2FxcGdsMGEwajNlbXN0NzJiYjR0OCJ9.SyBs2loDNXW2L0pOeQFAIQ'
     
     
 
