@@ -1,0 +1,27 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-74.00878, 40.70563]
+			},
+			"properties": {
+				"title": "Mapbox",
+				"description": "Washington"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-122.414, 37.776]
+			},
+			"properties": {
+				"title": "Mapbox",
+				"description": "San Francisco, Californi"
+			}
+		}
+	]
+}

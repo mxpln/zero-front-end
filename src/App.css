@@ -10,8 +10,17 @@
   background-image: url('/marker.svg');
   background-size: cover;
 
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   /* border-radius: 50%; */
   cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }

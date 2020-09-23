@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
-import Marker from './Markers';
-import PopUp from './PopUp';
+import Marker from './Pin';
+import PopUp from './DriverInfos';
 import fetchData from '../api/fetchData';
+import geojson from '../data.json';
 
 mapboxgl.accessToken =
 	'pk.eyJ1IjoicGF1bGluZS1kY3MiLCJhIjoiY2s5b2FxcGdsMGEwajNlbXN0NzJiYjR0OCJ9.SyBs2loDNXW2L0pOeQFAIQ';
@@ -27,49 +28,24 @@ const Mapbox = () => {
 		// add navigation control (the +/- zoom buttons)
 		map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 
-		map.on('load', () => {
-			// add the data source for new a feature collection with no features
-			map.addSource('random-points-data', {
-				type: 'geojson',
-				data: {
-					type: 'FeatureCollection',
-					features: [],
-				},
-			});
-			// now add the layer, and reference the data source above by name
-			map.addLayer({
-				id: 'random-points-layer',
-				source: 'random-points-data',
-				type: 'symbol',
-				layout: {
-					// full list of icons here: https://labs.mapbox.com/maki-icons
-					'icon-image': 'bakery-15', // this will put little croissants on our map
-					'icon-padding': 0,
-					'icon-allow-overlap': true,
-				},
-			});
-		});
+		geojson.features.forEach(function (marker) {
+			// create a HTML element for each feature
+			var el = document.createElement('div');
+			el.className = 'marker';
 
-		map.on('moveend', async () => {
-			// get new center coordinates
-			const { lng, lat } = map.getCenter();
-			// fetch new data
-			const results = await fetchData({ longitude: lng, latitude: lat });
-			// update "random-points-data" source with new data
-			// all layers that consume the "random-points-data" data source will be updated automatically
-			map.getSource('random-points-data').setData(results);
-		});
-
-		// change cursor to pointer when user hovers over a clickable feature
-		map.on('mouseenter', 'random-points-layer', (e) => {
-			if (e.features.length) {
-				map.getCanvas().style.cursor = 'pointer';
-			}
-		});
-
-		// reset cursor to default when user is no longer hovering over a clickable feature
-		map.on('mouseleave', 'random-points-layer', () => {
-			map.getCanvas().style.cursor = '';
+			// make a marker for each feature and add to the map
+			new mapboxgl.Marker(el)
+				.setLngLat(marker.geometry.coordinates)
+				.setPopup(
+					new mapboxgl.Popup({ offset: 25 }).setHTML(
+						'<h3>' +
+							marker.properties.title +
+							'</h3><p>' +
+							marker.properties.description +
+							'</p>'
+					)
+				)
+				.addTo(map);
 		});
 
 		// add popup when user clicks a point
