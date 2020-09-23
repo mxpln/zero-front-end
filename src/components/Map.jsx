@@ -17,22 +17,22 @@ const MAPBOX_TOKEN =
 	'pk.eyJ1IjoicGF1bGluZS1kY3MiLCJhIjoiY2s5b2FxcGdsMGEwajNlbXN0NzJiYjR0OCJ9.SyBs2loDNXW2L0pOeQFAIQ';
 const fullscreenControlStyle = {
 	position: 'absolute',
-	bottom: 36,
-	right: 0,
+	bottom: 130,
+	right: 100,
 	padding: '10px',
 };
 
 const navStyle = {
 	position: 'absolute',
-	bottom: 15,
-	right: 0,
+	bottom: 30,
+	right: 100,
 	padding: '10px',
 };
 
 const scaleControlStyle = {
 	position: 'absolute',
-	bottom: 10,
-	right: 0,
+	bottom: 20,
+	right: 150,
 	padding: '10px',
 };
 const Map = () => {

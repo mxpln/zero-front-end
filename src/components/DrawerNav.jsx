@@ -31,7 +31,8 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 	},
 	toolbar: {
-		paddingRight: 24, // keep right padding when drawer closed
+		paddingRight: 24,
+		backgroundColor: '#114c48',
 	},
 	toolbarIcon: {
 		display: 'flex',
@@ -66,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	drawerPaper: {
 		position: 'relative',
+		backgroundColor: '#f5ebe9',
 		whiteSpace: 'nowrap',
 		width: drawerWidth,
 		transition: theme.transitions.create('width', {
@@ -107,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Dashboard() {
 	const classes = useStyles();
-	const [open, setOpen] = React.useState(true);
+	const [open, setOpen] = React.useState(false);
 	const handleDrawerOpen = () => {
 		setOpen(true);
 	};
@@ -160,7 +162,7 @@ export default function Dashboard() {
 			>
 				<div className={classes.toolbarIcon}>
 					<IconButton onClick={handleDrawerClose}>
-						<ChevronLeftIcon />
+						<ChevronLeftIcon color="secondary" />
 					</IconButton>
 				</div>
 				<Divider />
@@ -170,31 +172,27 @@ export default function Dashboard() {
 						<ListItem button>
 							<ListItemIcon>
 								<DirectionsRunIcon />
-								<ListItemText primary="Dashboard" />
 							</ListItemIcon>
-						</ListItem>
-						<ListItem button>
-							<ListItemIcon>
-								<TimelineIcon />
-								<ListItemText primary="Plan a delivery" />
-							</ListItemIcon>
+							<ListItemText primary="Drivers" />
 						</ListItem>
 						<ListItem button>
 							<ListItemIcon>
 								<AccessTimeIcon />
-								<ListItemText primary="See statistics" />
 							</ListItemIcon>
+							<ListItemText primary="Plan a delivery" />
+						</ListItem>
+						<ListItem button>
+							<ListItemIcon>
+								<TimelineIcon />
+							</ListItemIcon>
+							<ListItemText primary="See statistics" />
 						</ListItem>
 					</div>
 				</List>
 			</Drawer>
 
 			<main className={classes.content}>
-				<Container maxWidth="lg" className={classes.container}>
-					<Grid container spacing={3}>
-						<Map />
-					</Grid>
-				</Container>
+				<Map />
 			</main>
 		</div>
 	);
