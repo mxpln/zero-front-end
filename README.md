@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Zero 🌱 
 
-## How to run the project
+## How to run the project 🖥
 
 #### 1. Run npm install to add all the dependencies used in this project 
     $ npm install
@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
     $ npm start
 
-## Map  
+## Map 🌎
 
  #### The map used is from Mapbox: https://www.mapbox.com/
  #### The token to access the map is hardcoded in the following file in case you need to change it:
